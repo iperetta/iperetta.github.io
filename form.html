@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8"> 
+    <style>
+    h2 {
+        background-color:blue; 
+        color:white;
+    }
+    </style>
+</head>
+<body>
+    <img style="float:right;" src="img/stallman.png">
+    <h2 >Questionário de preferências musicais 
+        e doação de sangue
+    </h2>
+    <form> 
+        <p>Nome: <input id="nome" name="nome" type="text"></p> 
+        <p>Data de nascimento: 
+            <input id="nascimento" name="nascimento" type="date"></p> 
+        <p>e-Mail: 
+            <input id="email" name="email" type="email"></p>
+        <p>Foto: 
+            <input id="foto" name="foto" type="file" 
+            accept="image/png, image/jpg"></p>
+        <p>Gênero: 
+        <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="helicoptero">Apache helicopter</option>
+            <option value="pokemongo">Jogador de Pokémon Go</option>
+            <option value="outros" selected>Não binário</option>
+        </select></p>
+        <p>
+        Tipo sanguíneo: <br>
+        <label><input type="radio" name="tiposangue" value="O">O</label>
+        <label><input type="radio" name="tiposangue" value="A">A</label>
+        <label><input type="radio" name="tiposangue" value="B">B</label>
+        <label><input type="radio" name="tiposangue" value="AB">AB</label>
+        <br>
+        <label><input type="radio" name="rhsangue" value="+">+</label>
+        <label><input type="radio" name="rhsangue" value="-">-</label>
+        </p>
+        <p>
+        Doenças: <br>
+        <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
+        <label><input type="checkbox" name="doencas" value="cancro">Cancro</label>
+        <label><input type="checkbox" name="doencas" value="pneumonia">Pneumonia</label>
+        <label><input type="checkbox" name="doencas" value="gripe">Gripe</label>
+        <p> Biografia:<br>
+        <textarea id="biografia" name="biografia" rows="5" cols="20">
+[Digite aqui]</textarea> 
+        </p>
+        <p>
+        Altura: 0<input type="range" min="0" max="3" name="altura">3
+        </p>
+        <p>
+        <button type="button" onclick="alert('Huehuehue')">Clica aqui</button> 
+        </p>
+    </form>
+</body>
+</html>

@@ -45,7 +45,7 @@ h3.subsecao {
     background-color:rgb(225, 225, 100);
 }
 div.pergunta {
-    background-color: blanchedalmond;
+    background-color: rgb(255, 178, 61);
     color: var(--main-bg-color);
     font-weight: bold;
     padding: 5px;

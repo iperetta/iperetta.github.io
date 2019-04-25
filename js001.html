@@ -170,8 +170,9 @@ console.log(str.slice(-9, -5)); // 'lazy'</pre></div>
         <pre>var pai = 'José';
 var mae = 'Maria';
 var txt = 'O pai é ' + pai;
+var idade = 16;
 txt += ' e a mãe é ' + mae + '!';
-console.log(txt); // 'O pai é José e a mãe é Maria!'</pre></div>
+console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Maria! Sua idade é 16'</pre></div>
 
     <h2 class=secao>JS: Objeto nativo <i>Math</i></h2>
 
@@ -336,18 +337,51 @@ console.log(txt); // 'O pai é José e a mãe é Maria!'</pre></div>
 <h2 class=secao>Desafios</h2>
 
 <ol class=pergunta>
+
+
+
 <div class=pergunta>
-    <li class=pergunta> Esta é uma pergunta</li>
+    <li class=pergunta> Divisão inteira</li>
 </div>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec magna ullamcorper, egestas velit at, sagittis mi. Phasellus porta ante sit amet turpis porta consequat. Fusce rutrum ullamcorper nunc, a molestie urna malesuada eget. Proin vel est at nulla sollicitudin vehicula quis in tortor. Sed in dui turpis. Donec eleifend justo sit amet tincidunt bibendum. Vestibulum sit amet ultrices nibh. In eget velit sed elit aliquet laoreet. Proin feugiat interdum malesuada. Suspendisse sodales ligula non felis dictum, dictum pellentesque tellus hendrerit. Vestibulum euismod sem leo, vitae venenatis erat tincidunt vel. Donec lacus velit, venenatis ac magna nec, viverra maximus elit. Suspendisse hendrerit dui at placerat efficitur. Sed sed mauris lorem. Quisque gravida nibh vitae consectetur egestas.
-</p>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt> <!-- function, console, button -->
+<pre>function Q1() {
+    console.log('Q1');
+    var x = Number.parseInt(document.getElementById('x').value);
+    var y = Number.parseInt(document.getElementById('y').value);
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
+Não esqueça o botão para ativar a função da resposta:</p> 
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q1()">Resposta Q1</button></textarea></div>
+<h3>Objetivo</h3>
+<p>A partir dos valores <i>x</i> e <i>y</i> informados pelo usuário, <b>imprima no console</b> qual o valor de <i>x</i>, de <i>y</i>, do quociente e do resto da divisão inteira de 
+<i>x</i> por <i>y</i>.</p>
+
+
+
 <div class=pergunta>
-    <li class=pergunta> Esta é outra</li>
+    <li class=pergunta> Cálculo da hipotenusa</li>
 </div>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec magna ullamcorper, egestas velit at, sagittis mi. Phasellus porta ante sit amet turpis porta consequat. Fusce rutrum ullamcorper nunc, a molestie urna malesuada eget. Proin vel est at nulla sollicitudin vehicula quis in tortor. Sed in dui turpis. Donec eleifend justo sit amet tincidunt bibendum. Vestibulum sit amet ultrices nibh. In eget velit sed elit aliquet laoreet. Proin feugiat interdum malesuada. Suspendisse sodales ligula non felis dictum, dictum pellentesque tellus hendrerit. Vestibulum euismod sem leo, vitae venenatis erat tincidunt vel. Donec lacus velit, venenatis ac magna nec, viverra maximus elit. Suspendisse hendrerit dui at placerat efficitur. Sed sed mauris lorem. Quisque gravida nibh vitae consectetur egestas.
-</p>
+<img src="https://blogdoenem.com.br/wp-content/uploads/2014/07/tri%C3%A2ngulo-ret%C3%A2ngulo-768x398.jpg" style="float:right;width:25%;">
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt> <!-- function, console, 2x button -->
+<pre>function Q2() {
+    console.log('Q2');
+    var x = Number.parseFloat(document.getElementById('x').value);
+    var y = Number.parseFloat(document.getElementById('y').value);
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
+Não esqueça o botão para ativar a função da resposta:</p> 
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q2()">Resposta Q2</button></textarea></div>
+<h3>Objetivo</h3>
+<p>Considerando os valores <i>x</i> e <i>y</i> informados pelo usuário como sendo os catetos de um triângulo retângulo, 
+<b>imprima no console</b> os valores de <i>x</i>, de <i>y</i> e da hipotenusa calculada.</p>
+
+
 </ol>
 
 <!-- ======================================================================================= -->

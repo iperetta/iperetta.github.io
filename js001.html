@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <script language="Javascript" type="text/javascript">
+        var NLAB = "001";
+    </script>
+    <title id="mytitle">Laboratório Javascript: 000</title>
+    <link rel="stylesheet" type="text/css" href="labs.css">
+</head>
+<body>
+<div class=titulo>
+    <h2>FEELT31107 Programação Script 2019-1</h2>
+    <h1>Laboratório Javascript: <script>document.write(NLAB);</script></h1>
+</div>
+
+<div class=introducao>
+
+    <h2 class=secao>Começando...</h2>
+
+    <h3 class=subsecao>Seu repositório</h2>
+
+    <p>Se você está em um computador público, abra um terminal e vá até a pasta de documentos para clonar seu repositório do GitHub:</p>
+
+    <div class=ttt>
+        <pre>git clone https://github.com/[seu-usuario-github]/[seu-usuario-github].github.io.git</pre>
+    </div>
+
+    <p>Abra sua pasta no VS Code para começar os trabalhos.</p>
+
+    <h3 class=subsecao>Arquivo HTML</h2>
+
+    <p>Na sua pasta, crie um arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span> com o seguinte código:</p>
+
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="7" style="margin-left: 20px; border: none;" id="htmlcode">
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <script src="respJS_000.js"></script>
+    </head>
+</html></textarea>
+    </div>
+
+
+    <p>Depois crie o arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> para gerar os códigos de resposta.</p>
+
+    <h3 class=subsecao>Console</h2>
+
+    <p>Após gravar o <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, carregue-o em um navegador.</p>
+    <p>Alguns navegadores acessam o console com F12, outros pela opção de inspecionar elementos. 
+        É necessário selecionar a aba do console no quadro que aparecerá.</p>
+    <p>Em JS, podemos escrever no console com o comando de log. Por exemplo, escreva: <span class=ttt>console.log("Olá mundo!");</span> 
+    no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> e recarregue sua página no navegador (F5 ou CTRL+F5).</p>
+    <!-- <p><span class=atention>ATENÇÃO!</span> Escrever como log no console não admite diacríticos (letras acentuadas, por exemplo).</p> -->
+    
+<!-- ======================================================================================= -->
+
+    <h2 class=secao>JS: Comentários</h2>
+    
+    <p>Você pode escrever comentários de linha única com <span class="ttt">//</span> e comentários de várias linhas entre <span class="ttt">/*</span> e <span class="ttt">*/</span>.</p>
+
+    <h2 class=secao>JS: Tipos de dados</h2>
+    <ul>
+    <li><b>Número:</b> qualquer número, incluindo números com casas decimais: <span class="ttt">8</span>, <span class="ttt">1516</span>, <span class="ttt">23.42</span>.</li>
+    <li><b>String:</b> Qualquer agrupamento de caracteres no teclado (letras, números, espaços, símbolos etc.) entre aspas apóstofres: <span class="ttt">'...'</span> ou aspas <span class="ttt">"..."</span>.</li>
+    <li><b>Booleano:</b> esse tipo de dados tem apenas dois valores possíveis - <span class="ttt">true</span> ou <span class="ttt">false</span> (sem aspas).</li>
+    <li><b>Nulo:</b> Esse tipo de dados representa a ausência intencional de um valor e é representado pela palavra-chave <span class="ttt">null</span> (sem aspas).</li>
+    <li><b>Indefinido:</b> esse tipo de dado é denotado pela palavra-chave <span class="ttt">undefined</span> (sem aspas). Também representa a ausência de um valor quando não inicializada a variável, embora tenha um uso diferente de nulo.</li>
+    </ul>
+
+    <h2 class=secao>JS: Número</h2>
+
+    <p>Para saber mais sobre como o computador registra números inteiros: <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_bin%C3%A1rio">Sistema de numeração binário</a> e
+    <a href="https://pt.wikipedia.org/wiki/Complemento_para_dois">Complemento de 2 (inteiros negativos)</a>.</p>
+
+    <p>Para saber mais sobre como o computador registra números de ponto flutuante: <a href="https://en.wikipedia.org/wiki/IEEE_754">Sobre norma IEEE 754</a> e <a href="https://www.h-schmidt.net/FloatConverter/IEEE754.html">Conversor binário para ponto flutuante</a>.
+
+    <p>Ao contrário de diversas outras linguagens, <b>JS</b> considera todos os números como um único tipo (inteiros, ponto flutuante).</p>
+
+    <p>Veja: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">
+    propriedades e métodos</a> para <i>Number</i></p>
+
+    <h3 class=subsecao>Propriedades</h3>
+
+    <ul>
+        <li><span class=ttt>Number.NaN</span></li>
+        <p><i>Not a Number</i>, não é um número; usado para indicar a impossibilidade matemática de se calcular algo.</p>
+        <li><span class=ttt>Number.EPSILON</span></li>
+        <p>Na computação, é o menor número que somado a 1 produza resultado diferente de 1, ou seja, que não é arredondado; veja aqui os detalhes: <a href="https://pt.wikipedia.org/wiki/%C3%89psilon_de_m%C3%A1quina">Épsilon de máquina</a></p>
+    </ul>
+
+    <h3 class=subsecao>Métodos</h3>
+
+    <ul>
+        <li><span class=ttt>Number.isNaN()</span></li>
+        <p>Testa se o valor é <i>NaN</i>; exemplo: <span class=ttt>console.log(Number.isNaN(0/0)); // true</span></p>
+        <li><span class=ttt>Number.isInteger()</span></li>
+        <p>Testa se o valor é inteiro.</p>
+        <li><span class=ttt>Number.parseInt()</span></li>
+        <p>A partir de uma string, retorna um número inteiro.</p>
+        <li><span class=ttt>Number.parseFloat()</span></li>
+        <p>A partir de uma string, retorna um número de ponto flutuante.</p>
+    </ul>
+
+    <h2 class=secao>JS: Operadores aritméticos</h2>
+    <ul>
+        <li>Adicionar: <span class=ttt>+</span></li>
+        <p>Exemplo: <span class=ttt>console.log(3 + 2.5); // 5.5</span></p>
+        <li>Subtrair: <span class=ttt>-</span></li>
+        <p>Exemplo: <span class=ttt>console.log(3 - 2.5); // 0.5</span></p>
+        <li>Multiplicar: <span class=ttt>*</span></li>
+        <p>Exemplo: <span class=ttt>console.log(37 * 13); // 481</span></p>
+        <li>Dividir: <span class=ttt>/</span></li>
+        <p>Exemplo: <span class=ttt>console.log(37 / 13); // 2.84615</span></p>
+        <li>Resto: <span class=ttt>%</span></li>
+        <p>Exemplo: <span class=ttt>console.log(37 % 13); // 11</span></p>
+    </ul>
+
+    <h2 class=secao>JS: <i>String</i></h2>
+
+    <p>Ao contrário de outras linguagens, o JS não faz distinção entre strings entre aspas simples e strings com aspas duplas; portanto, as seqüências de escape funcionam em strings criadas com apóstrofes ou aspas.</p>
+
+    <p>Exemplos de caractere de escape: <span class=ttt>\'</span> (apóstrofe), <span class=ttt>\"</span> (aspa), <span class=ttt>\\</span> (barra invertida), <span class=ttt>\n</span> (nova linha), <span class=ttt>\t</span> (tabulação).</p>
+    <p>Veja: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype">
+    propriedades e métodos</a> para <i>String</i></p>
+
+    <h3 class=subsecao>Propriedades</h3>
+    
+    <ul>
+        <li><span class=ttt>''.length</span></li>
+        <p>Exemplo: <span class=ttt>console.log('Amor'.length); // 4</span></p>
+    </ul>
+
+    <h3 class=subsecao>Métodos</h3>
+
+    <ul>
+        <li><span class=ttt>''.charAt()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('Amor'.charAt(1)); // 'm'</span></p>
+        <li><span class=ttt>''.toUpperCase()</span> ou <span class=ttt>''.toLocaleUpperCase()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('aMor'.toUpperCase()); // 'AMOR'</span></p>
+        <li><span class=ttt>''.toLowerCase()</span> ou <span class=ttt>''.toLocaleLowerCase()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('ÓdIO'.toLocaleLowerCase('pt-BR')); // 'ódio'</span></p>
+        <li><span class=ttt>''.startsWith()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('Amor'.startsWith('A')); // true</span></p>
+        <li><span class=ttt>''.includes()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('Mississipi'.includes('sissi')); // true</span></p>
+        <li><span class=ttt>''.endsWith()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('Amor'.endsWith('A')); // false</span></p>
+        <li><span class=ttt>''.replace()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('Amor'.replace('mo', 'rmado')); // 'Armador'</span></p>
+        <li><span class=ttt>''.trim()</span></li>
+        <p>Exemplo: <span class=ttt>console.log('   O cavalo chegou   '.trim()); // 'O cavalo chegou'</span></p>
+        <li><span class=ttt>''.slice()</span></li>
+        <p>Exemplo:</p>
+    <div class=ttt>
+        <pre>var str = 'The quick brown fox jumps over the lazy dog.';
+console.log(str.slice(31)); // 'the lazy dog.'
+console.log(str.slice(4, 19)); // 'quick brown fox'
+console.log(str.slice(-4)); // 'dog.'
+console.log(str.slice(-9, -5)); // 'lazy'</pre></div>
+    </ul>
+
+    <h3 class=subsecao>Concatenação de Strings</h3>
+
+    <p>Em JS, o operador <span class=ttt>+</span> consegue concatenar strings. Por exemplo:</p>
+
+    <div class=ttt>
+        <pre>var pai = 'José';
+var mae = 'Maria';
+var txt = 'O pai é ' + pai;
+txt += ' e a mãe é ' + mae + '!';
+console.log(txt); // 'O pai é José e a mãe é Maria!'</pre></div>
+
+    <h2 class=secao>JS: Objeto nativo <i>Math</i></h2>
+
+    <p>Veja: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">
+    propriedades e métodos</a> para <i>Math</i></p>
+
+    <h3 class=subsecao>Propriedades</h3>
+
+    <ul>
+        <li><span class=ttt>Math.PI</span></li>
+        <p>Constante <i>pi</i> = 3.14159....</p>
+        <li><span class=ttt>Math.E</span></li>
+        <p>Constante <i>e</i> = 2.71828...</p>
+    </ul>
+
+    <h3 class=subsecao>Métodos</h3>
+    
+    <ul>
+        <li><span class=ttt>Math.round()</span></li>
+        <p>Arredonda o argumento.</p>
+        <li><span class=ttt>Math.floor()</span></li>
+        <p>Arredonda o argumento para baixo.</p>
+        <li><span class=ttt>Math.ceil()</span></li>
+        <p>Arredonda o argumento para cima.</p>
+        <li><span class=ttt>Math.abs()</span></li>
+        <p>Valor absoluto do número.</p>
+        <li><span class=ttt>Math.min()</span></li>
+        <p>Retorna o menor número de uma sequência de números.</p>
+        <li><span class=ttt>Math.max()</span></li>
+        <p>Retorna o maior número de uma sequência de números.</p>
+        <li><span class=ttt>Math.pow()</span></li>
+        <p>Potência; exemplo: <span class=ttt>console(Math.pow(2,3)); // 8</span></p>
+        <li><span class=ttt>Math.sqrt()</span></li>
+        <p>Raiz quadrada; exemplo: <span class=ttt>console(Math.sqrt(2)); // 1.41421...</span></p>
+        <li><span class=ttt>Math.exp()</span></li>
+        <p>Exponencial, base <i>e</i> à potência; exemplo: <span class=ttt>console.log(Math.exp(0)); // 1</span></p>
+        <li><span class=ttt>Math.log()</span></li>
+        <p>Logaritmo natural, base <i>e</i>; exemplo: <span class=ttt>console.log(Math.log(Math.E)); // 1</span></p>
+        <li><span class=ttt>Math.sin()</span></li>
+        <p>Função trigonoimétrica seno.</p>
+        <li><span class=ttt>Math.cos()</span></li>
+        <p>Função trigonoimétrica cosseno.</p>
+        <li><span class=ttt>Math.tan()</span></li>
+        <p>Função trigonoimétrica tangente.</p>
+    </ul>
+
+    <h2 class=secao>JS: Variáveis</h2>
+
+    <p>Palavras reservadas:</p> 
+    
+    <ul>
+        <li><span class=ttt>var</span>, escopo de função, pode ser alterada;</li>
+        <li><span class=ttt>let</span>, escopo de bloco, pode ser alterada; e</li>
+        <li><span class=ttt>const</span>, não pode ser alterada.</li>
+    </ul>
+
+    <h3 class=subsecao>Operadores de atribuição matemáticos, incremento e decremento</h3>
+
+    <ul>
+        <li>Adicionar e atribuir: <span class=ttt>+=</span></li>
+        <p>Exemplo: <span class=ttt>var x = 150; x += 30; // x = 180</span></p>
+        <li>Subtrair e atribuir: <span class=ttt>-=</span></li>
+        <p>Exemplo: <span class=ttt>var x = 150; x -= 30; // x = 120</span></p>
+        <li>Multiplicar e atribuir: <span class=ttt>*=</span></li>
+        <p>Exemplo: <span class=ttt>var x = 150; x *= 30;  // x = 4500</span></p>
+        <li>Dividir e atribuir: <span class=ttt>/=</span></li>
+        <p>Exemplo: <span class=ttt>var x = 150; x /= 30; // x = 5</span></p>
+        <li>Resto e atribuir: <span class=ttt>%=</span></li>
+        <p>Exemplo: <span class=ttt>var x = 150; x %= 30; // x = 0</span></p>
+    </ul>
+
+
+    <h3 class=subsecao>Operador <i>typeof</i></h3>
+
+    <h2 class=secao>JS: Condicional</h2>
+
+    <p>Palavras reservadas: <span class=ttt>if</span>, <span class=ttt>else if</span> e <span class=ttt>else</span></p>
+
+    <h3 class=subsecao>Operadores de comparação</h3>
+
+    <ul>
+    <li>Menor que: <span class=ttt><</span></li>
+    <li>Maior que: <span class=ttt>></span></li>
+    <li>Menor ou igual a: <span class=ttt><=</span></li>
+    <li>Maior que ou igual a: <span class=ttt>>=</span></li>
+    <li>É igual a (igualdade): <span class=ttt>==</span></li>
+    <li>Não é igual a (não igualdade): <span class=ttt>!=</span></li>
+    <li>É igual a (identidade): <span class=ttt>===</span></li>
+    <li>Não é igual a (não identidade): <span class=ttt>!==</span></li>
+    </ul>
+
+    <p><span class=atention>ATENÇÃO!</span>Operadores baseados em igualdade tentarão tornar os tipos de dados 
+    iguais antes de fazer a comparação, por exemplo <span class=ttt>console.log(1 == '1.0'); // true</span>. Por outro lado, operadores baseados em identidade requerem que os dois 
+    tipos de dados sejam os mesmos de um pré-requisito, por exemplo <span class=ttt>console.log(1 === '1.0'); // false.</p>
+
+    <h3 class=subsecao>Operadores lógicos</h3>
+    <ul>
+    <li>Conjunção (operador e; AND): <span class=ttt>&&</span></li>
+    <li>Disjunção (operador ou; OR): <span class=ttt>||</span></li>
+    <li>Negação (operador não; NOT): <span class=ttt>!</span></li>
+    </ul>
+
+    <table> <caption><i>Tabela da Verdade</i></caption>
+    <thead>
+    <tr><th><b>A</b></th><th><b>B</b></th><th><b>A && B</b></th><th><b>A || B</b></th><th><b>!A</b></th><th><b>!B</b></th></tr>
+    </thead>
+    <tbody>
+    <tr><td><i style="color:red;">false</i></td><td><i style="color:red;">false</i></td><td><i style="color:red;">false</i></td><td><i style="color:red;">false</i></td><td><i style="color:green;">true</i></td><td><i style="color:green;">true</i></td></tr>
+    <tr><td><i style="color:red;">false</i></td><td><i style="color:green;">true</i></td><td><i style="color:red;">false</i></td><td><i style="color:green;">true</i></td><td><i style="color:green;">true</i></td><td><i style="color:red;">false</i></td></tr>
+    <tr><td><i style="color:green;">true</i></td><td><i style="color:red;">false</i></td><td><i style="color:red;">false</i></td><td><i style="color:green;">true</i></td><td><i style="color:red;">false</i></td><td><i style="color:green;">true</i></td></tr>
+    <tr><td><i style="color:green;">true</i></td><td><i style="color:green;">true</i></td><td><i style="color:green;">true</i></td><td><i style="color:green;">true</i></td><td><i style="color:red;">false</i></td><td><i style="color:red;">false</i></td></tr>
+    </tbody>
+    </table>
+
+    <h3 class=subsecao>Veracidade e falsidade de variáveis</h3>
+
+    Você pode checar a existência de uma variável com <span class=ttt>if (nome-da-variavel)</span>. Se der 
+    <span class=ttt>true</span>, a variável existe e possui valor identificável. Será <span class=ttt>false</span> nas seguintes situações:
+    <ul>
+    <li>A variável tem valor <span class=ttt>0</span>;</li>
+    <li>A variável é uma string vazia <span class=ttt>''</span> ou <span class=ttt>""</span>;</li>
+    <li>A variável tem valor <span class=ttt>null</span> (sem valor);</li>
+    <li>A variável tem tipo <span class=ttt>undefined</span> (não inicializada);</li>
+    <li>A variável tem valor <span class=ttt>NaN</span> (não é um número);</li>
+    </ul>
+
+    <h3 class=subsecao>Operador ternário [ -- ? -- : -- ]</h3>
+
+    <p>Exemplo:</p>
+    <div class=ttt>
+        <pre>if (estaCorreto) {
+    console.log('Correto!');
+} else {
+    console.log('Incorreto!');
+}</pre></div>
+
+    <p>Pode ser escrito como:</p>
+    <div class=ttt>
+        <pre>estaCorreto ? console.log('Correto!') : console.log('Incorreto!');</pre></div>
+
+<h3 class=subsecao><i>Switch</i></h3>
+<p>Palavras reservadas: <span class=ttt>switch</span>, <span class=ttt>case</span>, <span class=ttt>break</span> e <span class=ttt>default</span>; exemplo:</p>
+<div class=ttt>
+        <pre>switch (fruta) {
+  case 'tomate':
+    console.log('Tomates são R$0.49');
+    break;
+  case 'lima':
+    console.log('Limas são R$1.49');
+    break;
+  case 'papaia':
+    console.log('Papaias são R$1.29');
+    break;
+  default:
+    console.log('Fruta desconhecida');
+}</pre></div>
+
+</div>
+
+<!-- ======================================================================================= -->
+
+<h2 class=secao>Desafios</h2>
+
+<ol class=pergunta>
+<div class=pergunta>
+    <li class=pergunta> Esta é uma pergunta</li>
+</div>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec magna ullamcorper, egestas velit at, sagittis mi. Phasellus porta ante sit amet turpis porta consequat. Fusce rutrum ullamcorper nunc, a molestie urna malesuada eget. Proin vel est at nulla sollicitudin vehicula quis in tortor. Sed in dui turpis. Donec eleifend justo sit amet tincidunt bibendum. Vestibulum sit amet ultrices nibh. In eget velit sed elit aliquet laoreet. Proin feugiat interdum malesuada. Suspendisse sodales ligula non felis dictum, dictum pellentesque tellus hendrerit. Vestibulum euismod sem leo, vitae venenatis erat tincidunt vel. Donec lacus velit, venenatis ac magna nec, viverra maximus elit. Suspendisse hendrerit dui at placerat efficitur. Sed sed mauris lorem. Quisque gravida nibh vitae consectetur egestas.
+</p>
+<div class=pergunta>
+    <li class=pergunta> Esta é outra</li>
+</div>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec magna ullamcorper, egestas velit at, sagittis mi. Phasellus porta ante sit amet turpis porta consequat. Fusce rutrum ullamcorper nunc, a molestie urna malesuada eget. Proin vel est at nulla sollicitudin vehicula quis in tortor. Sed in dui turpis. Donec eleifend justo sit amet tincidunt bibendum. Vestibulum sit amet ultrices nibh. In eget velit sed elit aliquet laoreet. Proin feugiat interdum malesuada. Suspendisse sodales ligula non felis dictum, dictum pellentesque tellus hendrerit. Vestibulum euismod sem leo, vitae venenatis erat tincidunt vel. Donec lacus velit, venenatis ac magna nec, viverra maximus elit. Suspendisse hendrerit dui at placerat efficitur. Sed sed mauris lorem. Quisque gravida nibh vitae consectetur egestas.
+</p>
+</ol>
+
+<!-- ======================================================================================= -->
+
+<div class=introducao>
+
+    <h2 class=secao>... Terminando</h2>
+
+    <p>Para encerrar suas atividades de laboratório no ambiente do <b>VS Code</b>:</p>
+    <ul>
+    <li><p>Acrescente ao seu arquivo <span class="ttt">index.html</span> o link para o laboratório recém-encerrado:<p></li>
+    <div class=ttt><textarea readonly class=ttt cols="80" rows="3" style="margin-top: 10px; margin-left: 20px; border: none;" id="htmlcode2">
+<li>
+    <a href="respJS_000.html">Respostas do laboratório JS_000</a>
+</li></textarea></div>
+    <li><p>Vá ao <i>Source Control</i> (CTRL+Shift+G) e prossiga com <i>Refresh</i>, escreva a mensagem, <i>Commit</i> e <i>Push</i>;</p></li>
+    <li><p>Se estiver em um computador público, abra o terminal e vá até a pasta de documentos onde sua pasta foi clonada; apague-a:</p></li>
+    <div class=ttt><pre>rm -rf [seu-usuario-github].github.io</pre></div>
+    </ul>
+
+</div>
+
+<div class="footer">
+<p>Copyright 2019 Igor Peretta</p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.
+</div>
+
+<script language="Javascript" type="text/javascript">
+    var t = document.getElementById('htmlcode').innerHTML;
+    document.getElementById('htmlcode').innerHTML = t.replace("000", NLAB);
+    t = document.getElementById('htmlcode2').innerHTML;
+    t = t.replace("000", NLAB);
+    document.getElementById('htmlcode2').innerHTML = t.replace("000", NLAB);
+    t = document.getElementById('mytitle').innerHTML;
+    document.getElementById('mytitle').innerHTML = t.replace("000", NLAB);
+</script>
+
+</body>
+</html>

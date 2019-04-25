@@ -17,6 +17,7 @@
     padding: 2px;
     color: lightgreen;
     font-family: monospace;
+    font-weight: normal;
 }
 pre {
     margin-left: 20px;
@@ -49,7 +50,7 @@ div.pergunta {
     color: var(--main-bg-color);
     font-weight: bold;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 ol.pergunta {
     counter-reset: section;

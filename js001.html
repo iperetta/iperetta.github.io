@@ -362,7 +362,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
 
 
 <div class=pergunta>
-    <li class=pergunta> Cálculo da hipotenusa</li>
+    <li class=pergunta> Cálculo da hipotenusado do triângulo retângulo</li>
 </div>
 <img src="https://blogdoenem.com.br/wp-content/uploads/2014/07/tri%C3%A2ngulo-ret%C3%A2ngulo-768x398.jpg" style="float:right;width:25%;">
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
@@ -382,7 +382,75 @@ Não esqueça o botão para ativar a função da resposta:</p>
 <b>imprima no console</b> os valores de <i>x</i>, de <i>y</i> e da hipotenusa calculada.</p>
 
 
+
+<div class=pergunta>
+    <li class=pergunta> Determinação de gênero </li>
+</div>
+<img src="https://blogdoenem.com.br/wp-content/uploads/2014/07/tri%C3%A2ngulo-ret%C3%A2ngulo-768x398.jpg" style="float:right;width:25%;">
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt> <!-- function, console, 2x button -->
+<pre>function Q3() {
+    console.log('Q3');
+    var aux = document.getElementById('profissoes');
+    var profissao = aux.options[aux.selectedIndex].text;
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima (sugestão a seguir).
+Não esqueça o botão para ativar a função da resposta:</p> 
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="18" style="margin-left: 20px; border: none;">
+<select id="profissoes">
+    <option value="bombeiro">Bombeiro</option>
+    <option value="ator">Ator</option>
+    <option value="atriz">Atriz</option>
+    <option value="musico">Musico</option>
+    <option value="musicista">Musicista</option>
+    <option value="enfermeira">Enfermeira</option>
+    <option value="medico">Médico</option>
+    <option value="medica">Médica</option>
+    <option value="engenheiro">Engenheiro</option>
+    <option value="engenheira">Engenheira</option>
+    <option value="presidente">Presidente</option>
+    <option value="professor">Professor</option>
+    <option value="professora">Professora</option>
+    <option value="farmaceutica">Farmacêutica</option>
+</select>
+
+<button type="button" onclick="Q3()">Resposta Q3</button></textarea></div>
+<h3>Objetivo</h3>
+<p>O usuário deve escolher no <i>dropbox</i> uma profissão e seu programa deve 
+<b>imprimir no console</b> a profissão escolhida e se é um substantivo masculino, feminino ou ambos.</p>
+
+
+
+<div class=pergunta>
+    <li class=pergunta> Cálculo do lado não informado do triângulo retângulo</li>
+</div>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt> <!-- function, console, 2x button -->
+<pre>function Q4() {
+    console.log('Q4');
+    var a_str = document.getElementById('a').value;
+    var b_str = document.getElementById('b').value;
+    var c_str = document.getElementById('c').value;
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
+Não esqueça o botão para ativar a função da resposta:</p> 
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q4()">Resposta Q4</button></textarea></div>
+<h3>Objetivo</h3>
+<p>Considerando os valores da hipotenusa ou dos catetos <i>b</i> e <i>c</i> informados pelo usuário como os de um triângulo retângulo, 
+<b>imprima no console</b> os valores de <i>a</i>, de <i>b</i> e de <i>c</i>. Detalhe, o usuário pode informar apenas dois dos três e
+o programa deve calcular o lado que falta.</p>
+
+
+
 </ol>
+
+<div class=pergunta>
+</div>
+
 
 <!-- ======================================================================================= -->
 

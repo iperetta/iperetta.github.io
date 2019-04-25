@@ -369,8 +369,8 @@ Não esqueça o botão para ativar a função da resposta:</p>
 <div class=ttt> <!-- function, console, 2x button -->
 <pre>function Q2() {
     console.log('Q2');
-    var x = Number.parseFloat(document.getElementById('x').value);
-    var y = Number.parseFloat(document.getElementById('y').value);
+    var x = Number.parseFloat(document.getElementById('b').value);
+    var y = Number.parseFloat(document.getElementById('c').value);
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
@@ -378,15 +378,14 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q2()">Resposta Q2</button></textarea></div>
 <h3>Objetivo</h3>
-<p>Considerando os valores <i>x</i> e <i>y</i> informados pelo usuário como sendo os catetos de um triângulo retângulo, 
-<b>imprima no console</b> os valores de <i>x</i>, de <i>y</i> e da hipotenusa calculada.</p>
+<p>Considerando os valores <i>b</i> e <i>c</i> informados pelo usuário como sendo os catetos de um triângulo retângulo, 
+<b>imprima no console</b> os valores de <i>b</i>, de <i>c</i> e da hipotenusa calculada.</p>
 
 
 
 <div class=pergunta>
     <li class=pergunta> Determinação de gênero </li>
 </div>
-<img src="https://blogdoenem.com.br/wp-content/uploads/2014/07/tri%C3%A2ngulo-ret%C3%A2ngulo-768x398.jpg" style="float:right;width:25%;">
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
 <div class=ttt> <!-- function, console, 2x button -->
 <pre>function Q3() {
@@ -440,10 +439,71 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q4()">Resposta Q4</button></textarea></div>
 <h3>Objetivo</h3>
-<p>Considerando os valores da hipotenusa ou dos catetos <i>b</i> e <i>c</i> informados pelo usuário como os de um triângulo retângulo, 
-<b>imprima no console</b> os valores de <i>a</i>, de <i>b</i> e de <i>c</i>. Detalhe, o usuário pode informar apenas dois dos três e
+<p>Considerando os valores da hipotenusa <i>a</i> ou dos catetos <i>b</i> e <i>c</i> informados pelo usuário como os de um triângulo retângulo, 
+<b>imprima no console</b> os valores de <i>a</i>, de <i>b</i> e de <i>c</i>. Detalhe, o usuário <b>pode informar apenas dois dos três</b> e
 o programa deve calcular o lado que falta.</p>
 
+
+
+<div class=pergunta>
+        <li class=pergunta> Cálculo de IMC com sugestão </li>
+    </div>
+    <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+    <div class=ttt> <!-- function, console, 2x button -->
+    <pre>function Q5() {
+        console.log('Q5');
+        var altura = Number.parseFloat(document.getElementById('altura').value);
+        var peso = Number.parseFloat(document.getElementById('peso').value);
+        var aux = document.getElementById('generos');
+        var genero = aux.options[aux.selectedIndex].text;
+        // Segue aqui seu código
+    }</pre></div>
+    <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
+    Não esqueça o botão para ativar a função da resposta:</p> 
+        <div class=ttt>
+    <textarea readonly class=ttt cols="80" rows="6" style="margin-left: 20px; border: none;">
+<select id="generos">
+    <option value="masculino">Masculino</option>
+    <option value="feminino">Feminino</option>
+</select>
+
+<button type="button" onclick="Q5()">Resposta Q5</button></textarea></div>
+    <h3>Objetivo</h3>
+    <p>A partir da altura e do peso da pessoa, calcule seu IMC (veja <a href="https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal">Cálculo IMC</a>). A seguir, com o auxílio da tabela a seguir,
+    <b>imprima no console</b> os valores da altura, do peso, do IMC, e a mensagem de resultado que se 
+	encontra na tabela.</p>
+
+    <table><caption><i>Resultados do IMC</i></caption>
+        <thead>
+            <tr>
+                    <th>IMC</th>
+                    <th>Resultado (masculino)</th>
+                    <th>Resultado (feminino)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td>Menos do que 18,5</td>
+                    <td>Magro</td>
+                    <td>Magra</td>
+            </tr>
+            <tr>
+                    <td>Entre 18,5 e 24,9</td>
+                    <td>Sarado</td>
+                    <td>Sarada</td>
+            </tr>
+            <tr>
+                    <td>Entre 25 e 29,9 </td>
+                    <td>Rechonchudo</td>
+                    <td>Rechonchuda</td>
+            </tr>
+            <tr>
+                    <td>Mais de 30</td>
+                    <td>Obeso</td>
+                    <td>Obesa</td>
+            </tr>
+        </tbody>
+    </table>
 
 
 </ol>
@@ -465,7 +525,7 @@ o programa deve calcular o lado que falta.</p>
 <li>
     <a href="respJS_000.html">Respostas do laboratório JS_000</a>
 </li></textarea></div>
-    <li><p>Vá ao <i>Source Control</i> (CTRL+Shift+G) e prossiga com <i>Refresh</i>, escreva a mensagem, <i>Commit</i> e <i>Push</i>;</p></li>
+    <li><p>Vá ao <i>Source Control</i>y (CTRL+Shift+G) e prossiga com <i>Refresh</i>, escreva a mensagem, <i>Commit</i> e <i>Push</i>;</p></li>
     <li><p>Se estiver em um computador público, abra o terminal e vá até a pasta de documentos onde sua pasta foi clonada; apague-a:</p></li>
     <div class=ttt><pre>rm -rf [seu-usuario-github].github.io</pre></div>
     </ul>
@@ -474,7 +534,7 @@ o programa deve calcular o lado que falta.</p>
 
 <div class="footer">
 <p>Copyright 2019 Igor Peretta</p>
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.ycreativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.
 </div>
 
 <script language="Javascript" type="text/javascript">

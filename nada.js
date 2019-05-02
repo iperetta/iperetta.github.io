@@ -39,9 +39,10 @@ function EsfericaParaCartesiana(r, phi, theta, casasdecimais=3) {
     let z = round(r*Math.cos(phi), casasdecimais);
     return "x= " + x + "; y= " + y + "; z= " + z;
 }
+var x = 2; // () -> f() -> *,/ -> +,-
 
 console.log(EsfericaParaCartesiana(1, Math.PI/3, Math.PI/6));
-console.log(EsfericaParaCartesiana(3, Math.PI/6, Math.PI/3, 5));
+console.log(EsfericaParaCartesiana(3, Math.PI/(6*x), Math.PI/3, 5));
 console.log(EsfericaParaCartesiana(2, Math.PI/4, Math.PI/4));
 
 
@@ -55,7 +56,29 @@ function XXX(arg) {
 	//console.log(P + " " + Q);
 }
 XXX(0);
-console.log(P + " " + Q);
+//console.log(P + " " + Q);
+
+var rrr;
+if (1 == "1.0") { console.log("True"); } else { console.log("False"); } 
+if (1 === "1.0") { console.log("True"); } else { console.log("False"); } 
+if (!rrr) { console.log("True"); } else { console.log("False"); } 
+
+let x1 = "5.0";
+switch(x1) {
+	case 5: console.log("A"); break;
+	case "teste": console.log("B"); break;
+
+}
 
 
+function fat(numero) {
+	return (numero === 0 || numero === 1)? 1 : fat(numero-1)*numero;
+}
+console.log(fat(5));
+console.log(fat(12));
+console.log(fat(15));
+console.log(fat(30));
+
+
+//else if ((!a&&!b) || (!a&&!c) || (!b&&!c))
 

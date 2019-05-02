@@ -58,15 +58,18 @@
     um parágrafo com <span class="ttt">id="RQ0"</span>, onde <span class="ttt">0</span> deve ser substituído pelo número da questão,
     e modificá-lo de maneira análoga ao seguinte exemplo:<p>
     <ul>
-    <li><p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span></p></li>
+    <li><p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>:</p></li>
+
     <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="2" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;" id="htmlcode3">
+<script src="respJS_000.js"></script> <!-- confirmar informação no header -->
 <!-- Questão 3, por exemplo -->
 <p id="RQ3">Sem resposta</p></textarea>
     </div>
-    <li><p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span></p></li>
+
+    <li><p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span>:</p></li>
     <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="4" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="4" style="margin-left: 20px; border: none;">
 function Q3(){ //por exemplo
     // ... depois do seu código
     document.getElementById('RQ3').innerHTML = "Texto da resposta: " + resp;
@@ -82,7 +85,7 @@ function Q3(){ //por exemplo
     <p>Você pode declarar funções com <span class="ttt">function</span> + <i>identificador</i> + <i>parênteses</i> + <i>chaves</i>, da seguinte maneira:</p>
 
   <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;">
 function OlaMundo(){
     console.log("Olá mundo!");
 }</textarea>
@@ -94,12 +97,12 @@ function OlaMundo(){
 <ul>
     <li><p>No arquivo <span class="ttt">.html</span></p></li>
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="2" style="margin-left: 20px; border: none;" id="htmlcode"><!-- Questão 3, por exemplo -->
+<textarea readonly class=ttt cols="80" rows="2" style="margin-left: 20px; border: none;"><!-- Questão 3, por exemplo -->
 <button type="button" onclick="OlaMundo()">OlaMundo()</button></textarea>
     </div>
     <li><p>No arquivo <span class="ttt">.js</span></p></li>
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="5" style="margin-left: 20px; border: none;" id="htmlcode"><!-- Questão 3, por exemplo -->
+<textarea readonly class=ttt cols="80" rows="5" style="margin-left: 20px; border: none;"><!-- Questão 3, por exemplo -->
 OlaMundo(); // no corpo do arquivo
 function chamaOlaMundo(){
     OlaMundo(); // dentro de outra função
@@ -111,7 +114,7 @@ function chamaOlaMundo(){
 
 <p>Dentro dos parênteses na declaração da função, você pode adicionar <i>parâmetros</i> à mesma. São as entradas que a função aceita. Exemplo:</p>
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;">
 function calculaAreaRetangulo(lado, altura){
     console.log(lado*altura);
 } </textarea>
@@ -120,7 +123,7 @@ function calculaAreaRetangulo(lado, altura){
 <p>Quando chamamos a função, devemos supri-la com <i>argumentos</i> (valores para os parâmetros). Esses argumentos podem ser utilizados
 no seu código para possibilitar computações. Exemplo:</p>
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;">
 calculaAreaRetangulo(3, 5); // Imprime '15' no console </textarea>
     </div>
 
@@ -129,13 +132,13 @@ calculaAreaRetangulo(3, 5); // Imprime '15' no console </textarea>
 <p>Podemos dar valores padrão para parâmetros em nossas funções. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="6" style="margin-left: 20px; border: none;" id="htmlcode">
-function greeting (name = 'estranho') {
+<textarea readonly class=ttt cols="80" rows="6" style="margin-left: 20px; border: none;">
+function saudacoes (name = 'estranho') {
   console.log(`Olá, ${name}!`); // <== esse tipo de string aceita variáveis
 }
 
-greeting('José'); // Imprime: Olá, José!
-greeting(); // Output: Olá, estranho!</textarea>
+saudacoes('José'); // Imprime: Olá, José!
+saudacoes(); // Output: Olá, estranho!</textarea>
     </div>
 
 <h3 class=subsecao>Retorno da função</h3>
@@ -144,7 +147,7 @@ greeting(); // Output: Olá, estranho!</textarea>
 <p>Note que o valor padrão de uma função é <span class="ttt">undefined</span>. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="4" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="4" style="margin-left: 20px; border: none;">
 function calculaAreaRetangulo(lado, altura){
     let area = lado*altura;
 } 
@@ -154,7 +157,7 @@ console.log(calculaAreaRetangulo(5, 7)); // Imprime 'undefined'</textarea>
 <p>Para retornar uma resposta, precisamos usar <span class="ttt">return</span>. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="8" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="8" style="margin-left: 20px; border: none;">
 function calculaAreaRetangulo(lado, altura){
     if (lado < 0 || altura < 0) {
         return 'Ambos argumentos >= 0 para calcular a área!';
@@ -170,7 +173,7 @@ console.log(calculaAreaRetangulo(5, -7)); // Imprime mensagem de erro</textarea>
 <p>Podemos usar nossas funções para reutilizar código. Nesse sentido, podemos definir funções auxiliares para realizar sub-tarefas. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="10" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="10" style="margin-left: 20px; border: none;">
 function multiplicaPorNoveQuintos(numero) {
     return numero*(9/5);
 } 
@@ -188,7 +191,7 @@ console.log('Celsius = ' + celsius + '°C; Fahrenheit = ' + Celsius2Fahrenheit(c
 Precisaremos usar a variável para tal. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="10" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="10" style="margin-left: 20px; border: none;">
 const plantaPrecisaAgua = function(dia) {
   if(dia === 'Quarta-Feira')
     return true;
@@ -204,7 +207,7 @@ console.log(plantaPrecisaAgua('Terça-Feira')); // Imprime 'false'</textarea>
 sucedido por chaves com seu código. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="9" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="9" style="margin-left: 20px; border: none;">
 const plantaPrecisaAgua = (dia) => {
   if(dia === 'Quarta-Feira')
     return true;
@@ -226,7 +229,7 @@ console.log(plantaPrecisaAgua('Terça-Feira')); // Imprime 'false'</textarea>
 <p>Logo, uma função que seria assim:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="6" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="6" style="margin-left: 20px; border: none;">
 function quadrado(numero) {
     return numero*numero;
 };
@@ -238,7 +241,7 @@ console.log(x2); // Imprime '49'</textarea>
 <p>Poderia virar isso aqui:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="2" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="2" style="margin-left: 20px; border: none;">
 var x2 = numero => numero*numero;
 console.log(x2(7)); // Imprime '49'</textarea>
     </div>
@@ -253,7 +256,7 @@ As variáveis definidas dentro de um bloco são chamadas <i>locais</i> e só pod
 <p>Em JS, o erro de acesso a variáveis fora de escopo é reconhecido como <span class="ttt">ReferenceError</span>. Por exemplo:</p>
 
 <div class=ttt>
-<textarea readonly class=ttt cols="80" rows="7" style="margin-left: 20px; border: none;" id="htmlcode">
+<textarea readonly class=ttt cols="80" rows="7" style="margin-left: 20px; border: none;">
 function logNumero(){
   const x = 42;
   console.log(x);
@@ -735,6 +738,9 @@ o programa deve calcular o lado que falta.</p>
     t = document.getElementById('htmlcode2').innerHTML;
     t = t.replace("000", NLAB);
     document.getElementById('htmlcode2').innerHTML = t.replace("000", NLAB);
+    t = document.getElementById('htmlcode3').innerHTML;
+    t = t.replace("000", NLAB);
+    document.getElementById('htmlcode3').innerHTML = t.replace("000", NLAB);
     t = document.getElementById('mytitle').innerHTML;
     document.getElementById('mytitle').innerHTML = t.replace("000", NLAB);
 </script>

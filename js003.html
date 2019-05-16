@@ -107,6 +107,16 @@ let inception = ['string', 42, true, ['string', 42, true, ['string', 42, true]]]
 let lista = []</textarea>
     </div>
 
+<p>Para testar se um array está vazio:</p>
+
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;" id="htmlcode">
+function isEmpty(arr) {
+    return (arr.length === 0); 
+}</textarea>
+    </div>
+
+
 <h3 class=subsecao>Acessando elementos</h3>
 
 <p>Cada elemento em um <i>array</i> tem uma posição numerada conhecida como seu índice. 
@@ -238,6 +248,40 @@ changeArr(concept);
 console.log(concept); // Imprime ['arrays', 'can', 'be', 'MUTATED']
 removeElement(concept);
 console.log(concept); // Imprime ['arrays', 'can', 'be']</textarea>
+    </div>
+
+
+<h3 class=subsecao>Representando matrizes em JS</h3>
+
+<p>Podemos representar matrizes em JS como uma lista aninhada. Por exemplo, a matriz:</p>
+
+    <table><caption><i>Matriz-exemplo M</i></caption>
+        <tbody>
+            <tr><td>a</td><td>b</td><td>c</td></tr>
+            <tr><td>d</td><td>e</td><td>f</td></tr>
+            <tr><td>g</td><td>h</td><td>i</td></tr>
+            <tr><td>j</td><td>k</td><td>l</td></tr>
+        </tbody>
+    </table>
+
+    <p>No exemplo acima, a matriz M tem 4 linhas e 3 colunas (M<sub>4,3</sub>). Em JS, podemos representá-la como:</p>
+
+<div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;" id="htmlcode">
+var M = [[a,b,c],[d,e,f],[g,h,i],[j,k,l]];</textarea>
+    </div>
+
+<p>onde cada elemento da array M é uma array por si só (sub-lista). O número de elementos de M equivale ao número de linhas, e o número de elementos de cada elemento de M equivale ao número de colunas.</p>
+
+<p>Com isso, podemos acessar cada elemento da matriz com a sintaxe <span class="ttt">M[linha][coluna]</span>. Para imprimir todos os elementos da matriz, podemos usar <span class="ttt">for</span> aninhados:</p>
+
+<div class=ttt>
+<textarea readonly class=ttt cols="80" rows="5" style="margin-left: 20px; border: none;" id="htmlcode">
+for(i = 0; i < M.length; i++) {
+    for(j = 0; j < M[i].length; j++) {
+        console.log(M[i][j]);
+    }
+}</textarea>
     </div>
 
 
@@ -823,7 +867,7 @@ console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Mari
 
 function Q1() {
     console.log('Q1');
-    var aux = document.getElementById('numerosQ1').text;
+    var aux = Number.parseInt(document.getElementById('numerosQ1').value);
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
@@ -835,7 +879,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
 <ol>
 <li>Crie uma entrada para o usuário entrar com um número inteiro positivo</li>
 <li>Crie uma função para determinar (<span class="ttt">true</span>/<span class="ttt">false</span>) se um número é par</li>
-<li>Com um laço, acrescente os números pares de 0 ao número informado pelo usuário a uma lista de primos</li>
+<li>Com um laço, acrescente os números pares de 0 ao número informado pelo usuário a uma lista de pares</li>
 <li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
 </ol>
 
@@ -847,9 +891,9 @@ Não esqueça o botão para ativar a função da resposta:</p>
 <pre>var primos = [];
 // Crie aqui suas funções de apoio
 
-function Q2() {
+function Q2() {aux
     console.log('Q2');
-    var aux = document.getElementById('numerosQ2').text;
+    var aux = Number.parseInt(document.getElementById('numerosQ2').value);
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
@@ -875,7 +919,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
 
 function Q3() {
     console.log('Q3');
-    var novaString = document.getElementById('novaString').text;
+    var novaString = document.getElementById('novaString').value;
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
@@ -902,7 +946,7 @@ var ordenados = [];
 
 function Q4() {
     console.log('Q4');
-    var aux = document.getElementById('numerosQ4').text;
+    var aux = document.getElementById('numerosQ4').value;
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
@@ -930,8 +974,8 @@ var matrizB = [];
 
 function Q5() {
     console.log('Q5');
-    var auxA = document.getElementById('matrizA').text;
-    var auxB = document.getElementById('matrizB').text;
+    var auxA = document.getElementById('matrizA').value;
+    var auxB = document.getElementById('matrizB').value;
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 

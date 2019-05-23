@@ -102,7 +102,7 @@ function Q3() {
     document.getElementById('RQ3').innerHTML = listaStrings;
 }
 
-function QuickSort_(X, lo, hi) { // X é array
+function QuickSort_(A, lo, hi) { // X é array
 
 	function partition(A, lo, hi) {
 		var pivot = A[hi];
@@ -125,8 +125,8 @@ function QuickSort_(X, lo, hi) { // X é array
 	var p;
     if(lo < hi){
         p = partition(A, lo, hi);
-        quicksort(A, lo, p - 1);
-        quicksort(A, p + 1, hi);
+        QuickSort_(A, lo, p - 1);
+        QuickSort_(A, p + 1, hi);
     }
 }
 

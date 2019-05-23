@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <script language="Javascript" type="text/javascript">
         var NLAB = "003";
     </script>
@@ -49,9 +49,9 @@
     <h3 class=subsecao>Console & Resposta no HTML</h2>
 
     <p>Após gravar o <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, carregue-o em um navegador.</p>
-    <p>Alguns navegadores acessam o console com F12, outros pela opção de inspecionar elementos. 
+    <p>Alguns navegadores acessam o console com F12, outros pela opção de inspecionar elementos.
         É necessário selecionar a aba do console no quadro que aparecerá.</p>
-    <p>Em JS, podemos escrever no console com o comando de log. Por exemplo, escreva: <span class=ttt>console.log("Olá mundo!");</span> 
+    <p>Em JS, podemos escrever no console com o comando de log. Por exemplo, escreva: <span class=ttt>console.log("Olá mundo!");</span>
     no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> e recarregue sua página no navegador (F5 ou CTRL+F5).</p>
     <!-- <p><span class=atention>ATENÇÃO!</span> Escrever como log no console não admite diacríticos (letras acentuadas, por exemplo).</p> -->
     <p>Para colocarmos a resposta no HTML (<span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>), basta criar
@@ -74,12 +74,12 @@ function Q3(){ //por exemplo
     </div>
     </ul>
 
-    
+
 <!-- ======================================================================================= -->
 
     <h2 class=secao>JS: <i>Arrays</i> (<i>aka</i> vetores, listas)</h2>
-    
-    <p>Organizar e armazenar dados é um conceito fundamental de programação. 
+
+    <p>Organizar e armazenar dados é um conceito fundamental de programação.
     Uma maneira de organizar dados na vida real é fazendo listas. Uma lista em JS:</p>
 
     <div class=ttt>
@@ -87,11 +87,11 @@ function Q3(){ //por exemplo
 let resolucoesAnoNovo = ['Diário', 'Aula de falcoaria', 'Malabarismos'];</textarea>
     </div>
 
-<p><i>Arrays</i> são a forma de criar listas de JS. Arrays podem armazenar qualquer tipo de dados (incluindo strings, 
+<p><i>Arrays</i> são a forma de criar listas de JS. Arrays podem armazenar qualquer tipo de dados (incluindo strings,
 números e booleanos). Como as listas, os vetores são ordenados, o que significa que cada item tem uma posição numérica.</p>
 
-<p>Uma maneira de se criar um vetor é agrupar itens entre colchetes <span class="ttt">[]</span>. 
-Os vetores podem armazenar qualquer tipo de dados, ou seja, podemos ter um vetor que contém todos os mesmos tipos de dados 
+<p>Uma maneira de se criar um vetor é agrupar itens entre colchetes <span class="ttt">[]</span>.
+Os vetores podem armazenar qualquer tipo de dados, ou seja, podemos ter um vetor que contém todos os mesmos tipos de dados
 ou um vetor que armazena diferentes tipos de dados, até mesmo outros vetores (aninhados).</p>
 
     <div class=ttt>
@@ -112,19 +112,19 @@ let lista = []</textarea>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="3" style="margin-left: 20px; border: none;" id="htmlcode">
 function isEmpty(arr) {
-    return (arr.length === 0); 
+    return (arr.length === 0);
 }</textarea>
     </div>
 
 
 <h3 class=subsecao>Acessando elementos</h3>
 
-<p>Cada elemento em um <i>array</i> tem uma posição numerada conhecida como seu índice. 
-Podemos acessar itens individuais usando o índice deles, que é semelhante a fazer referência a um item 
+<p>Cada elemento em um <i>array</i> tem uma posição numerada conhecida como seu índice.
+Podemos acessar itens individuais usando o índice deles, que é semelhante a fazer referência a um item
 em uma lista com base na posição do item.</p>
 
-</p>Os <i>arrays</i> em JS são indexados em zero, o que significa que as posições começam a contar a partir 
-de <span class="ttt">0</span> em vez de <span class="ttt">1</span>. Portanto, 
+</p>Os <i>arrays</i> em JS são indexados em zero, o que significa que as posições começam a contar a partir
+de <span class="ttt">0</span> em vez de <span class="ttt">1</span>. Portanto,
 o primeiro item em uma matriz estará na posição <span class="ttt">0</span>.</p>
 
     <div class=ttt>
@@ -139,11 +139,11 @@ console.log(cidades[0]); // Imprime 'Nova Iorque'</textarea>
 <li><span class="ttt">cidades</span> é um <i>array</i> que possui três elementos.</li>
 <li>Estamos usando a notação de colchetes <span class="ttt">[]</span> com o índice após o identificador do <i>array</i>
 para acessar o elemento.</li>
-<li><span class="ttt">cidades[0]</span> acessará o elemento no índice 0 no array <span class="ttt">cidades</span>. 
+<li><span class="ttt">cidades[0]</span> acessará o elemento no índice 0 no array <span class="ttt">cidades</span>.
 Você pode pensar em <span class="ttt">cidades[0]</span> como acessando o espaço na memória que contém a string 'Nova Iorque'.</li>
 </ul>
 
-<p><span class=atention>ATENÇÃO!</span> O que acontece se você tentar acessar um índice que está além do último elemento? 
+<p><span class=atention>ATENÇÃO!</span> O que acontece se você tentar acessar um índice que está além do último elemento?
 Sua tentativa resultará em um <span class="ttt">undefined</span><p>
 
 <h3 class=subsecao>Atualizando elementos</h3>
@@ -157,14 +157,14 @@ cidades[1] = 'Salvador';
 console.log(cidades); // Imprime '['Nova Iorque', 'Salvador', 'Pequim']'</textarea>
     </div>
 
-<p>Variáveis declaradas com a palavra-chave <span class="ttt">const</span> não podem ser reatribuídas. 
-No entanto, elementos em um array declarado com <span class="ttt">const</span> permanecem modificáveis. 
-Isso significa que podemos alterar o <u>conteúdo</u> de um array de const, mas <u>não podemos reatribuir</u> 
+<p>Variáveis declaradas com a palavra-chave <span class="ttt">const</span> não podem ser reatribuídas.
+No entanto, elementos em um array declarado com <span class="ttt">const</span> permanecem modificáveis.
+Isso significa que podemos alterar o <u>conteúdo</u> de um array de const, mas <u>não podemos reatribuir</u>
 um novo array ou um valor (tipo) diferente.</p>
 
 <h3 class=subsecao>Tamanho</h3>
 
-<p>Uma das propriedades internas de um array é o seu tamanho (<span class="ttt">.length</span>) que informa o número de 
+<p>Uma das propriedades internas de um array é o seu tamanho (<span class="ttt">.length</span>) que informa o número de
 itens no array. Nós acessamos a propriedade <span class="ttt">.length</span> como fazemos com strings.</p>
 
     <div class=ttt>
@@ -196,17 +196,17 @@ console.log(x); // Imprime 'item 2'</textarea>
 
 <h3 class=subsecao>Outros métodos de arrays</h3>
 
-<p>Você pode acessar a documentação de outros métodos de array aqui: 
+<p>Você pode acessar a documentação de outros métodos de array aqui:
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">
 Mozilla Developer Network (MDN) array documentation</a></p>
 
-<p><span class="ttt">.pop()</span> e <span class="ttt">.push()</span> mutam o array no qual eles são chamados. No entanto, há momentos em que não queremos 
-alterar o array original e podemos usar métodos de matriz não-mutantes. Certifique-se de verificar o MDN 
+<p><span class="ttt">.pop()</span> e <span class="ttt">.push()</span> mutam o array no qual eles são chamados. No entanto, há momentos em que não queremos
+alterar o array original e podemos usar métodos de matriz não-mutantes. Certifique-se de verificar o MDN
 para entender o comportamento do método que você está usando.</p>
 
-<p>Alguns métodos de matrizes disponíveis para desenvolvedores de JavaScript incluem: 
-<span class="ttt">.join()</span>, <span class="ttt">.slice()</span>, <span class="ttt">.splice()</span>, <span class="ttt">.shift()</span>, 
-<span class="ttt">.unshift()</span> e <span class="ttt">.concat()</span>, entre muitos outros. 
+<p>Alguns métodos de matrizes disponíveis para desenvolvedores de JavaScript incluem:
+<span class="ttt">.join()</span>, <span class="ttt">.slice()</span>, <span class="ttt">.splice()</span>, <span class="ttt">.shift()</span>,
+<span class="ttt">.unshift()</span> e <span class="ttt">.concat()</span>, entre muitos outros.
 Usando esses métodos internos, é mais fácil executar algumas tarefas comuns ao trabalhar com arrays.</p>
 
 <p>Por exemplo, <span class="ttt">.shift()</span> e <span class="ttt">.unshift()</span> remove ou adiciona, respectivamente,
@@ -342,7 +342,7 @@ for (let conta = 0; conta < 4; conta++) {
 
 <h3 class=subsecao>O laço reverso com <i>for</i></h3>
 
-<p>Com modificações simples nas expressões, podemos fazer nosso loop rodar para trás! 
+<p>Com modificações simples nas expressões, podemos fazer nosso loop rodar para trás!
 Para executar um loop reverso com <span class="ttt">for</span>, devemos:</p>
 
 <ul>
@@ -358,7 +358,7 @@ for (let conta = 3; conta >= 0; conta--) {
   console.log(conta);
 }</textarea>
     </div>
-    
+
 <p>Com o seguinte resultado:</p>
 
     <div class=ttt>
@@ -393,13 +393,13 @@ Sloth
 Sea Lion</textarea>
     </div>
 
-<p>No laço acima, nomeamos nossa variável iteradora <span class="ttt">i</span>. 
-Essa é uma convenção de nomenclatura de variáveis que você verá em muitos laços. 
-Quando usamos <span class="ttt">i</span> para iterar através de matrizes, podemos pensar nele como 
-sendo de curta duração para o índice de palavras. Observe como nossa condição de parada 
-verifica se <span class="ttt">i</span> é menor que <span class="ttt">animals.length</span>. 
-Lembre-se que os arrays são indexadas com início em zero, o índice do último elemento de uma matriz é 
-equivalente ao <span class="ttt">.length</span> desse array menos 1. Se tentássemos acessar um elemento 
+<p>No laço acima, nomeamos nossa variável iteradora <span class="ttt">i</span>.
+Essa é uma convenção de nomenclatura de variáveis que você verá em muitos laços.
+Quando usamos <span class="ttt">i</span> para iterar através de matrizes, podemos pensar nele como
+sendo de curta duração para o índice de palavras. Observe como nossa condição de parada
+verifica se <span class="ttt">i</span> é menor que <span class="ttt">animals.length</span>.
+Lembre-se que os arrays são indexadas com início em zero, o índice do último elemento de uma matriz é
+equivalente ao <span class="ttt">.length</span> desse array menos 1. Se tentássemos acessar um elemento
 no índice de <span class="ttt">animals.length</span>, teríamos ido longe demais (resultado: <span class="ttt">undefined</span>)!
 
 Com laços <span class="ttt">for</span>, é mais fácil trabalharmos com elementos em arrays.
@@ -413,7 +413,7 @@ function OlaMundo(){
 }</textarea>
     </div>
 
-    <p>O nome dado à função é o <i>identificador</i> da mesma e deve ser único dentro de um mesmo contexto. 
+    <p>O nome dado à função é o <i>identificador</i> da mesma e deve ser único dentro de um mesmo contexto.
     Você pode chamar essa função escrevendo seu identificador em meio ao seu código. Por exemplo:</p>
 
 <ul>
@@ -459,7 +459,7 @@ greeting(); // Output: Olá, estranho!</textarea>
 <textarea readonly class=ttt cols="80" rows="4" style="margin-left: 20px; border: none;" id="htmlcode">
 function calculaAreaRetangulo(lado, altura){
     let area = lado*altura;
-} 
+}
 console.log(calculaAreaRetangulo(5, 7)); // Imprime 'undefined'</textarea>
     </div>
 
@@ -472,7 +472,7 @@ function calculaAreaRetangulo(lado, altura){
         return 'Ambos argumentos >= 0 para calcular a área!';
     }
     return lado*altura;
-} 
+}
 console.log(calculaAreaRetangulo(5, 7)); // Imprime '35'
 console.log(calculaAreaRetangulo(5, -7)); // Imprime mensagem de erro</textarea>
     </div>
@@ -485,12 +485,12 @@ console.log(calculaAreaRetangulo(5, -7)); // Imprime mensagem de erro</textarea>
 <textarea readonly class=ttt cols="80" rows="10" style="margin-left: 20px; border: none;" id="htmlcode">
 function multiplicaPorNoveQuintos(numero) {
     return numero*(9/5);
-} 
+}
 function Celsius2Fahrenheit(celsius) {
     return multiplicaPorNoveQuintos(celsius) + 32;
 }
 var celsius = 15;
-console.log('Celsius = ' + celsius + '; Fahrenheit = ' + Celsius2Fahrenheit(celsius)); 
+console.log('Celsius = ' + celsius + '; Fahrenheit = ' + Celsius2Fahrenheit(celsius));
 // Imprime 'Celsius = 15; Fahrenheit = 59'</textarea>
     </div>
 
@@ -504,7 +504,7 @@ Precisaremos usar a variável para tal. Por exemplo:</p>
 const plantaPrecisaAgua = function(dia) {
   if(dia === 'Quarta-Feira')
     return true;
-  else 
+  else
     return false;
 };
 
@@ -512,7 +512,7 @@ console.log(plantaPrecisaAgua('Quarta-Feira')); // Imprime 'true'
 console.log(plantaPrecisaAgua('Terça-Feira')); // Imprime 'false'</textarea>
     </div>
 
-<p>Você pode usar o operador <span class="ttt">=></span> para definir uma função anônima, antecedido de parênteses com os parâmetros e 
+<p>Você pode usar o operador <span class="ttt">=></span> para definir uma função anônima, antecedido de parênteses com os parâmetros e
 sucedido por chaves com seu código. Por exemplo:</p>
 
 <div class=ttt>
@@ -520,7 +520,7 @@ sucedido por chaves com seu código. Por exemplo:</p>
 const plantaPrecisaAgua = (dia) => {
   if(dia === 'Quarta-Feira')
     return true;
-  else 
+  else
     return false;
 };
 
@@ -644,7 +644,7 @@ console.log(x); // 'ReferenceError: x is not defined ...'</textarea>
     propriedades e métodos</a> para <i>String</i></p>
 
     <h3 class=subsecao>Propriedades</h3>
-    
+
     <ul>
         <li><span class=ttt>''.length</span></li>
         <p>Exemplo: <span class=ttt>console.log('Amor'.length); // 4</span></p>
@@ -706,7 +706,7 @@ console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Mari
     </ul>
 
     <h3 class=subsecao>Métodos</h3>
-    
+
     <ul>
         <li><span class=ttt>Math.round()</span></li>
         <p>Arredonda o argumento.</p>
@@ -738,8 +738,8 @@ console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Mari
 
     <h2 class=secao>JS: Variáveis</h2>
 
-    <p>Palavras reservadas:</p> 
-    
+    <p>Palavras reservadas:</p>
+
     <ul>
         <li><span class=ttt>var</span>, escopo de função, pode ser alterada;</li>
         <li><span class=ttt>let</span>, escopo de bloco, pode ser alterada; e</li>
@@ -781,8 +781,8 @@ console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Mari
     <li>Não é igual a (não identidade): <span class=ttt>!==</span></li>
     </ul>
 
-    <p><span class=atention>ATENÇÃO!</span>Operadores baseados em igualdade tentarão tornar os tipos de dados 
-    iguais antes de fazer a comparação, por exemplo <span class=ttt>console.log(1 == '1.0'); // true</span>. Por outro lado, operadores baseados em identidade requerem que os dois 
+    <p><span class=atention>ATENÇÃO!</span>Operadores baseados em igualdade tentarão tornar os tipos de dados
+    iguais antes de fazer a comparação, por exemplo <span class=ttt>console.log(1 == '1.0'); // true</span>. Por outro lado, operadores baseados em identidade requerem que os dois
     tipos de dados sejam os mesmos de um pré-requisito, por exemplo <span class=ttt>console.log(1 === '1.0'); // false.</p>
 
     <h3 class=subsecao>Operadores lógicos</h3>
@@ -806,7 +806,7 @@ console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Mari
 
     <h3 class=subsecao>Veracidade e falsidade de variáveis</h3>
 
-    Você pode checar a existência de uma variável com <span class=ttt>if (nome-da-variavel)</span>. Se der 
+    Você pode checar a existência de uma variável com <span class=ttt>if (nome-da-variavel)</span>. Se der
     <span class=ttt>true</span>, a variável existe e possui valor identificável. Será <span class=ttt>false</span> nas seguintes situações:
     <ul>
     <li>A variável tem valor <span class=ttt>0</span>;</li>
@@ -861,18 +861,18 @@ console.log(txt + ' Sua idade é ' + idade); // 'O pai é José e a mãe é Mari
     <li class=pergunta> Números pares até...</li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
-<pre>var pares = [];
-// Crie aqui suas funções de apoio
+<div class=ttt>
+<pre>// Crie aqui suas funções de apoio
 
 function Q1() {
     console.log('Q1');
+    var pares = [];
     var aux = Number.parseInt(document.getElementById('numerosQ1').value);
     // Segue aqui seu código
 }</pre></div>
-<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
 ser necessário considerando o código acima (sugestão a seguir).
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q1()">Resposta Q1</button></textarea></div>
 <h3>Objetivo</h3>
@@ -887,18 +887,18 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <li class=pergunta> Números primos até...</li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
-<pre>var primos = [];
-// Crie aqui suas funções de apoio
+<div class=ttt>
+<pre>// Crie aqui suas funções de apoio
 
 function Q2() {aux
     console.log('Q2');
+    var primos = [];
     var aux = Number.parseInt(document.getElementById('numerosQ2').value);
     // Segue aqui seu código
 }</pre></div>
-<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
 ser necessário considerando o código acima (sugestão a seguir).
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q2()">Resposta Q2</button></textarea></div>
 <h3>Objetivo</h3>
@@ -913,18 +913,18 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <li class=pergunta> Preenchendo vetor de strings</li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
-<pre>var listaStrings = [];
-// Crie aqui suas funções de apoio
+<div class=ttt>
+<pre>// Crie aqui suas funções de apoio
 
 function Q3() {
     console.log('Q3');
+    var listaStrings = [];
     var novaString = document.getElementById('novaString').value;
     // Segue aqui seu código
 }</pre></div>
-<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
 ser necessário considerando o código acima (sugestão a seguir).
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q3()">Resposta Q3</button></textarea></div>
 <h3>Objetivo</h3>
@@ -939,25 +939,25 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <li class=pergunta>Ordenação <i>Quicksort</i></li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
-<pre>var numerosQ4 = [];
-var ordenados = [];
-// Crie aqui suas funções de apoio
+<div class=ttt>
+<pre>// Crie aqui suas funções de apoio
 
 function Q4() {
     console.log('Q4');
+    var numerosQ4 = [];
+    var ordenados = [];
     var aux = document.getElementById('numerosQ4').value;
     // Segue aqui seu código
 }</pre></div>
-<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
 ser necessário considerando o código acima (sugestão a seguir).
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q4()">Resposta Q4</button></textarea></div>
 <h3>Objetivo</h3>
 <p>A ordenação de números é um problema interessante na computação. O algoritmo <i>Quicksort</i> é uma das maneiras de se fazê-lo (<a href="https://pt.wikipedia.org/wiki/Quicksort">clique aqui para o algoritmo <i>Quicksort</i></a>).</p>
 <ol>
-<li>Crie uma entrada para o usuário entrar com uma lista de números reais (separadas por <span class="ttt">;</span>), armazenado-os em 
+<li>Crie uma entrada para o usuário entrar com uma lista de números reais (separadas por <span class="ttt">;</span>), armazenado-os em
 <span class="ttt">numerosQ4</span></li>
 <li>Crie uma função para gerar a lista ordenada por <i>Quicksort</i></li>
 <li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
@@ -967,24 +967,24 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <li class=pergunta> Multiplicação de matrizes</li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
-<pre>var matrizA = [];
-var matrizB = [];
-// Crie aqui suas funções de apoio
+<div class=ttt>
+<pre>// Crie aqui suas funções de apoio
 
 function Q5() {
     console.log('Q5');
+    var matrizA = [];
+    var matrizB = [];
     var auxA = document.getElementById('matrizA').value;
     var auxB = document.getElementById('matrizB').value;
     // Segue aqui seu código
 }</pre></div>
-<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar 
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
 ser necessário considerando o código acima (sugestão a seguir).
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q5()">Resposta Q5</button></textarea></div>
 <h3>Objetivo</h3>
-<p>Podemos definir uma matriz como uma lista (elementos como linhas) de listas aninhadas (cada uma sendo uma linha). 
+<p>Podemos definir uma matriz como uma lista (elementos como linhas) de listas aninhadas (cada uma sendo uma linha).
 Note que cada linha precisa ter o <u>MESMO</u> número de elementos.</p>
 <ol>
 <li>Crie uma entrada para o usuário entrar com uma lista de números reais (separadas por <span class="ttt">;</span>)</li>
@@ -1009,11 +1009,11 @@ Note que cada linha precisa ter o <u>MESMO</u> número de elementos.</p>
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q2()">Resposta Q2</button></textarea></div>
 <h3>Objetivo</h3>
-<p>Considerando os valores <i>b</i> e <i>c</i> informados pelo usuário como sendo os catetos de um triângulo retângulo, 
+<p>Considerando os valores <i>b</i> e <i>c</i> informados pelo usuário como sendo os catetos de um triângulo retângulo,
 <b>imprima no console</b> os valores de <i>b</i>, de <i>c</i> e da hipotenusa calculada.</p>
 
 
@@ -1022,7 +1022,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <li class=pergunta> Determinação de gênero </li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
+<div class=ttt>
 <pre>function Q3() {
     console.log('Q3');
     var aux = document.getElementById('profissoes');
@@ -1030,7 +1030,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima (sugestão a seguir).
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="18" style="margin-left: 20px; border: none;">
 <select id="profissoes">
@@ -1052,7 +1052,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
 
 <button type="button" onclick="Q3()">Resposta Q3</button></textarea></div>
 <h3>Objetivo</h3>
-<p>O usuário deve escolher no <i>dropbox</i> uma profissão e seu programa deve 
+<p>O usuário deve escolher no <i>dropbox</i> uma profissão e seu programa deve
 <b>imprimir no console</b> a profissão escolhida e se é um substantivo masculino, feminino ou ambos.</p>
 
 
@@ -1061,7 +1061,7 @@ Não esqueça o botão para ativar a função da resposta:</p>
     <li class=pergunta> Cálculo do lado não informado do triângulo retângulo</li>
 </div>
 <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-<div class=ttt> 
+<div class=ttt>
 <pre>function Q4() {
     console.log('Q4');
     var a_str = document.getElementById('a').value;
@@ -1070,11 +1070,11 @@ Não esqueça o botão para ativar a função da resposta:</p>
     // Segue aqui seu código
 }</pre></div>
 <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
-Não esqueça o botão para ativar a função da resposta:</p> 
+Não esqueça o botão para ativar a função da resposta:</p>
     <div class=ttt>
 <textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q4()">Resposta Q4</button></textarea></div>
 <h3>Objetivo</h3>
-<p>Considerando os valores da hipotenusa <i>a</i> ou dos catetos <i>b</i> e <i>c</i> informados pelo usuário como os de um triângulo retângulo, 
+<p>Considerando os valores da hipotenusa <i>a</i> ou dos catetos <i>b</i> e <i>c</i> informados pelo usuário como os de um triângulo retângulo,
 <b>imprima no console</b> os valores de <i>a</i>, de <i>b</i> e de <i>c</i>. Detalhe, o usuário <b>pode informar apenas dois dos três</b> e
 o programa deve calcular o lado que falta.</p>
 
@@ -1084,7 +1084,7 @@ o programa deve calcular o lado que falta.</p>
         <li class=pergunta> Cálculo de IMC com sugestão </li>
     </div>
     <p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
-    <div class=ttt> 
+    <div class=ttt>
     <pre>function Q5() {
         console.log('Q5');
         var altura = Number.parseFloat(document.getElementById('altura').value);
@@ -1094,7 +1094,7 @@ o programa deve calcular o lado que falta.</p>
         // Segue aqui seu código
     }</pre></div>
     <p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar ser necessário considerando o código acima.
-    Não esqueça o botão para ativar a função da resposta:</p> 
+    Não esqueça o botão para ativar a função da resposta:</p>
         <div class=ttt>
     <textarea readonly class=ttt cols="80" rows="6" style="margin-left: 20px; border: none;">
 <select id="generos">
@@ -1105,7 +1105,7 @@ o programa deve calcular o lado que falta.</p>
 <button type="button" onclick="Q5()">Resposta Q5</button></textarea></div>
     <h3>Objetivo</h3>
     <p>A partir da altura e do peso da pessoa, calcule seu IMC (veja <a href="https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal">Cálculo IMC</a>). A seguir, com o auxílio da tabela a seguir,
-    <b>imprima no console</b> os valores da altura, do peso, do IMC, e a mensagem de resultado que se 
+    <b>imprima no console</b> os valores da altura, do peso, do IMC, e a mensagem de resultado que se
 	encontra na tabela.</p>
 
     <table><caption><i>Resultados do IMC</i></caption>
@@ -1160,7 +1160,7 @@ o programa deve calcular o lado que falta.</p>
 <li>
     <a href="respJS_000.html">Respostas do laboratório JS_000</a>
 </li></textarea></div>
-    <li><p>Vá ao <i>Source Control</i>y (CTRL+Shift+G) e prossiga com <i>Refresh</i>, escreva a mensagem, <i>Commit</i> e <i>Push</i>;</p></li>
+    <li><p>Vá ao <i>Source Control</i> (CTRL+Shift+G) e prossiga com <i>Refresh</i>, escreva a mensagem, <i>Commit</i> e <i>Push</i>;</p></li>
     <li><p>Se estiver em um computador público, abra o terminal e vá até a pasta de documentos onde sua pasta foi clonada; apague-a:</p></li>
     <div class=ttt><pre>rm -rf [seu-usuario-github].github.io</pre></div>
     </ul>

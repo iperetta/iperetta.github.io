@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <script language="Javascript" type="text/javascript">
+        var NLAB = "004";
+    </script>
+    <title id="mytitle">Laboratório Javascript: 000</title>
+    <link rel="stylesheet" type="text/css" href="labs.css">
+</head>
+<body>
+<div class=titulo>
+    <h2>FEELT31107 Programação Script 2019-1</h2>
+    <h1>Laboratório Javascript: <script>document.write(NLAB);</script></h1>
+</div>
+
+<div class=introducao>
+
+    <h2 class=secao>Começando...</h2>
+
+    <h3 class=subsecao>Seu repositório</h2>
+
+    <p>Se você está em um computador público, abra um terminal e vá até a pasta de documentos para clonar seu repositório do GitHub:</p>
+
+    <div class=ttt>
+        <pre>git clone https://github.com/[seu-usuario-github]/[seu-usuario-github].github.io.git</pre>
+    </div>
+
+    <p>Abra sua pasta no VS Code para começar os trabalhos.</p>
+
+    <h3 class=subsecao>Arquivo HTML</h2>
+
+    <p>Na sua pasta, crie um arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span> com o seguinte código:</p>
+
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="7" style="margin-left: 20px; border: none;" id="htmlcode">
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <script src="respJS_000.js"></script>
+    </head>
+</html></textarea>
+    </div>
+
+
+    <p>Depois crie o arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> para gerar os códigos de resposta.</p>
+
+    <h3 class=subsecao>Console & Resposta no HTML</h2>
+
+    <p>Após gravar o <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, carregue-o em um navegador.</p>
+    <p>Alguns navegadores acessam o console com F12, outros pela opção de inspecionar elementos.
+        É necessário selecionar a aba do console no quadro que aparecerá.</p>
+    <p>Em JS, podemos escrever no console com o comando de log. Por exemplo, escreva: <span class=ttt>console.log("Olá mundo!");</span>
+    no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> e recarregue sua página no navegador (F5 ou CTRL+F5).</p>
+    <!-- <p><span class=atention>ATENÇÃO!</span> Escrever como log no console não admite diacríticos (letras acentuadas, por exemplo).</p> -->
+    <p>Para colocarmos a resposta no HTML (<span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>), basta criar
+    um parágrafo com <span class="ttt">id="RQ0"</span>, onde <span class="ttt">0</span> deve ser substituído pelo número da questão,
+    e modificá-lo de maneira análoga ao seguinte exemplo:<p>
+    <ul>
+    <li><p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span></p></li>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="2" style="margin-left: 20px; border: none;" id="htmlcode">
+<!-- Questão 3, por exemplo -->
+<p id="RQ3">Sem resposta</p></textarea>
+    </div>
+    <li><p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span></p></li>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="4" style="margin-left: 20px; border: none;" id="htmlcode">
+function Q3(){ //por exemplo
+    // ... depois do seu código
+    document.getElementById('RQ3').innerHTML = "Texto da resposta: " + resp;
+}</textarea>
+    </div>
+    </ul>
+
+
+<!-- ======================================================================================= -->
+
+    <h2 class=secao>JS: Bootstrap</h2>
+
+<p>O Bootstrap 4 é a versão mais recente do Bootstrap, que é o framework mais popular de HTML,
+  CSS e JavaScript para o desenvolvimento de websites responsivos e para disposivos móveis.</p>
+
+<p>Bootstrap 4 é totalmente gratuito para baixar e usar.</p>
+
+<p>Vantagens do Bootstrap:</p>
+
+<ul>
+<li>Fácil de usar: qualquer pessoa com conhecimento básico de HTML e CSS pode começar a usar o Bootstrap</li>
+<li>Recursos responsivos: o CSS responsivo do Bootstrap se ajusta a telefones, tablets e desktops</li>
+<li>Primeira abordagem para dispositivos móveis: no Bootstrap, os estilos para dispositivos móveis fazem parte da estrutura principal</li>
+<li>Compatibilidade do navegador: o Bootstrap 4 é compatível com todos os navegadores modernos (Chrome, Firefox, Internet Explorer 10+, Edge, Safari e Opera)</li>
+</ul>
+
+<p>Para usar o Bootstrap4 em seu site, basta incluir um link de uma CDN (Rede
+  de entrega de conteúdo, sigla em inglês) nas suas páginas da web (aqui, da MaxCDN):</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="100" rows="11" style="margin-left: 20px; border: none;" id="htmlcode">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></textarea>
+    </div>
+
+<p>Tutorial no <a href="https://www.w3schools.com/bootstrap4/default.asp">W3School/Bootstrap4</a></p>
+
+<h2 class=secao>JS: W3.CSS</h2>
+
+<p>Se você só precisar de CSS, esta é uma boa alternativa.
+  O W3.CSS é um framework CSS, publicado pela W3Schools, disponibilizado gratuitamente.</p>
+
+<p>Para usar o W3.CSS em seu site, basta adicionar um link para "w3.css" nas suas páginas da web:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;" id="htmlcode">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></textarea>
+    </div>
+
+<p>Ou baixe w3.css de <a href="https://www.w3schools.com/w3css/4/w3.css">w3css_downloads</a>
+  (botão direito do mouse e "Save linked content as" na pasta do seu projeto)
+   e adicione um link para w3.css:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;" id="htmlcode">
+<link rel="stylesheet" href="w3.css"></textarea>
+    </div>
+
+<p>Tutorial no <a href="https://www.w3schools.com/w3css/default.asp">W3School/Bootstrap4</a></p>
+
+<!-- ======================================================================================= -->
+
+<h2 class=secao>Projeto 1: Desenvolver site em HTML, CCS e JS responsivo</h2>
+
+<ol class=pergunta>
+<div class=pergunta>
+    <li class=pergunta> Desenvolver um site em HTML5 com Bootstrap4 ou W3.CSS que tenha funções em JS.</li>
+</div>
+
+</ol>
+
+<!-- <ol class=pergunta>
+
+
+
+<div class=pergunta>
+    <li class=pergunta> Números pares até...</li>
+</div>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt>
+<pre>var pares = [];
+// Crie aqui suas funções de apoio
+
+function Q1() {
+    console.log('Q1');
+    var aux = Number.parseInt(document.getElementById('numerosQ1').value);
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
+ser necessário considerando o código acima (sugestão a seguir).
+Não esqueça o botão para ativar a função da resposta:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q1()">Resposta Q1</button></textarea></div>
+<h3>Objetivo</h3>
+<ol>
+<li>Crie uma entrada para o usuário entrar com um número inteiro positivo</li>
+<li>Crie uma função para determinar (<span class="ttt">true</span>/<span class="ttt">false</span>) se um número é par</li>
+<li>Com um laço, acrescente os números pares de 0 ao número informado pelo usuário a uma lista de pares</li>
+<li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
+</ol> -->
+
+<!-- <div class=pergunta>
+    <li class=pergunta> Números primos até...</li>
+</div>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt>
+<pre>// Crie aqui suas funções de apoio
+
+function Q2() {aux
+    console.log('Q2');
+    var primos = [];
+    var aux = Number.parseInt(document.getElementById('numerosQ2').value);
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
+ser necessário considerando o código acima (sugestão a seguir).
+Não esqueça o botão para ativar a função da resposta:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q2()">Resposta Q2</button></textarea></div>
+<h3>Objetivo</h3>
+<ol>
+<li>Crie uma entrada para o usuário entrar com um número inteiro positivo</li>
+<li>Crie uma função para determinar (<span class="ttt">true</span>/<span class="ttt">false</span>) se um número é primo</li>
+<li>Com um laço, acrescente os números primos de 2 ao número informado pelo usuário a uma lista de primos</li>
+<li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
+</ol>
+
+<div class=pergunta>
+    <li class=pergunta> Preenchendo vetor de strings</li>
+</div>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt>
+<pre>var listaStrings = [];
+// Crie aqui suas funções de apoio
+
+function Q3() {
+    console.log('Q3');
+    var novaString = document.getElementById('novaString').value;
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
+ser necessário considerando o código acima (sugestão a seguir).
+Não esqueça o botão para ativar a função da resposta:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q3()">Resposta Q3</button></textarea></div>
+<h3>Objetivo</h3>
+<ol>
+<li>Crie uma entrada para o usuário entrar com uma string</li>
+<li>Crie um botão que acrescente a string a uma lista e que apague o texto da entrada em (1)</li>
+<li>Com um laço, modifique as strings da lista para caracteres em maiúsculas</li>
+<li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
+</ol>
+
+<div class=pergunta>
+    <li class=pergunta>Ordenação <i>Quicksort</i></li>
+</div>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt>
+<pre>var numerosQ4 = [];
+var ordenados = [];
+// Crie aqui suas funções de apoio
+
+function Q4() {
+    console.log('Q4');
+    var aux = document.getElementById('numerosQ4').value;
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
+ser necessário considerando o código acima (sugestão a seguir).
+Não esqueça o botão para ativar a função da resposta:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q4()">Resposta Q4</button></textarea></div>
+<h3>Objetivo</h3>
+<p>A ordenação de números é um problema interessante na computação. O algoritmo <i>Quicksort</i> é uma das maneiras de se fazê-lo (<a href="https://pt.wikipedia.org/wiki/Quicksort">clique aqui para o algoritmo <i>Quicksort</i></a>).</p>
+<ol>
+<li>Crie uma entrada para o usuário entrar com uma lista de números reais (separadas por <span class="ttt">;</span>), armazenado-os em
+<span class="ttt">numerosQ4</span></li>
+<li>Crie uma função para gerar a lista ordenada por <i>Quicksort</i></li>
+<li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
+</ol>
+
+<div class=pergunta>
+    <li class=pergunta> Multiplicação de matrizes</li>
+</div>
+<p>Acrescente no arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.js</span> o seguinte código:</p>
+<div class=ttt>
+<pre>var matrizA = [];
+var matrizB = [];
+// Crie aqui suas funções de apoio
+
+function Q5() {
+    console.log('Q5');
+    var auxA = document.getElementById('matrizA').value;
+    var auxB = document.getElementById('matrizB').value;
+    // Segue aqui seu código
+}</pre></div>
+<p>No arquivo <span class="ttt">respJS_<script>document.write(NLAB);</script>.html</span>, coloque o que acreditar
+ser necessário considerando o código acima (sugestão a seguir).
+Não esqueça o botão para ativar a função da resposta:</p>
+    <div class=ttt>
+<textarea readonly class=ttt cols="80" rows="1" style="margin-left: 20px; border: none;"><button type="button" onclick="Q5()">Resposta Q5</button></textarea></div>
+<h3>Objetivo</h3>
+<p>Podemos definir uma matriz como uma lista (elementos como linhas) de listas aninhadas (cada uma sendo uma linha).
+Note que cada linha precisa ter o <u>MESMO</u> número de elementos.</p>
+<ol>
+<li>Crie uma entrada para o usuário entrar com uma lista de números reais (separadas por <span class="ttt">;</span>)</li>
+<li>Crie um botão que acesse a função de acrescentar à <span class="ttt">matrizA</span> a nova linha; que apague o texto da entrada em (1); e que vá mostrando a matriz A de entrada</li>
+<li>Crie outra entrada para o usuário entrar com uma lista de números reais (separadas por <span class="ttt">;</span>)</li>
+<li>Crie outro botão que acesse a função de acrescentar à <span class="ttt">matrizB</span> a nova linha; que apague o texto da entrada em (3); e que vá mostrando a matriz B de entrada</li>
+<li>Crie uma função para determinar a matriz resultante da multiplicação de A por B (<a href="https://www.blogcyberini.com/2017/09/algoritmo-multiplicacao-de-matrizes.html">clique aqui para o algoritmo</a>)</li>
+<li>Ao apertar o botão de resposta, o usuário tem acesso à resposta (mostre a resposta no console e no html)</li>
+</ol> -->
+
+
+<!-- ======================================================================================= -->
+
+<div class=introducao>
+
+    <h2 class=secao>... Terminando</h2>
+
+    <p>Para encerrar suas atividades de laboratório no ambiente do <b>VS Code</b>:</p>
+    <ul>
+    <li><p>Acrescente ao seu arquivo <span class="ttt">index.html</span> o link para o laboratório recém-encerrado:<p></li>
+    <div class=ttt><textarea readonly class=ttt cols="80" rows="3" style="margin-top: 10px; margin-left: 20px; border: none;" id="htmlcode2">
+<li>
+    <a href="projeto1.html">Projeto 1 - site responsivo</a>
+</li></textarea></div>
+    <li><p>Vá ao <i>Source Control</i> (CTRL+Shift+G) e prossiga com <i>Refresh</i>, escreva a mensagem, <i>Commit</i> e <i>Push</i>;</p></li>
+    <li><p>Se estiver em um computador público, abra o terminal e vá até a pasta de documentos onde sua pasta foi clonada; apague-a:</p></li>
+    <div class=ttt><pre>rm -rf [seu-usuario-github].github.io</pre></div>
+    </ul>
+
+</div>
+
+<div class="footer">
+<p>Copyright 2019 Igor Peretta</p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.ycreativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.
+</div>
+
+<script language="Javascript" type="text/javascript">
+    var t = document.getElementById('htmlcode').innerHTML;
+    document.getElementById('htmlcode').innerHTML = t.replace("000", NLAB);
+    t = document.getElementById('htmlcode2').innerHTML;
+    t = t.replace("000", NLAB);
+    document.getElementById('htmlcode2').innerHTML = t.replace("000", NLAB);
+    t = document.getElementById('mytitle').innerHTML;
+    document.getElementById('mytitle').innerHTML = t.replace("000", NLAB);
+</script>
+
+</body>
+</html>

@@ -1,4 +1,6 @@
 {
     "code-runner.clearPreviousOutput": true,
-    "code-runner.saveAllFilesBeforeRun": true
+    "code-runner.saveAllFilesBeforeRun": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }

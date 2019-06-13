@@ -24,10 +24,11 @@ print(dic['dois'])
 msg = 'Custa dois reais'
 novamsg = []
 for palavra in msg.split():
-    if palavra in dic.keys():
-        novamsg.append(str(dic[palavra]))
-    else:
-        novamsg.append(palavra)
+    novamsg.append(str(dic.get(palavra, palavra)))
+    # if palavra in dic.keys():
+    #     novamsg.append(str(dic[palavra]))
+    # else:
+    #     novamsg.append(palavra)
 novamsg = ' '.join(novamsg)
 print(novamsg)
 
@@ -40,10 +41,11 @@ dic = {
 msg = "I'm eating a green apple"
 traducao = []
 for palavra in msg.split():
-    if palavra in dic.keys():
-        traducao.append(dic[palavra])
-    else:
-        traducao.append(palavra)
+    traducao.append(dic.get(palavra, palavra))
+    # if palavra in dic.keys():
+    #     traducao.append(dic[palavra])
+    # else:
+    #     traducao.append(palavra)
 print(' '.join(traducao))
 print(dic.values())
 print(dic.items())
